@@ -1,5 +1,5 @@
 ##to load the dataset from the zipped file
-filename<-"./data/household_power_consumption.txt"
+filename<-"../data/household_power_consumption.txt"
 dataset<-read.table(filename,                 
                     header=TRUE,
                     sep=";",
