@@ -18,3 +18,4 @@ newData$DateTime <- strptime(x, "%d/%m/%Y %H:%M:%S")
 rownames(newData) <- 1:nrow(newData)
 dim(newData) # 2880   10
 attach(newData)
+

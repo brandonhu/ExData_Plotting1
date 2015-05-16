@@ -1,0 +1,16 @@
+{
+    "contents" : "## First check whether it has the file in the current dir.\nif (!\"loadData.R\" %in% list.files()) {\n  setwd(\"./ExData_Plotting1\")\n} \n#source the file\nsource(\"./loadData.R\")\n#screen device\npng(filename = \"plot1.png\", \n    width = 480, height = 480, \n    units = \"px\", bg = \"transparent\")\n#plot histogram\nhist(Global_active_power, \n     col = \"red\", \n     main = \"Global Active Power\", \n     xlab = \"Global Active Power (kilowatts)\",\n     breaks = 12, ylim = c(0, 1200))\n#close the device\ndev.off()\n\n",
+    "created" : 1428858364257.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2071621698",
+    "id" : "2E99ED6A",
+    "lastKnownWriteTime" : 1428858397,
+    "path" : "C:/Users/brandonhu/Desktop/brandon/Course/ExploratoryGraphs/Project_1/ExData_Plotting1/plot1.R",
+    "project_path" : "plot1.R",
+    "properties" : {
+    },
+    "source_on_save" : true,
+    "type" : "r_source"
+}

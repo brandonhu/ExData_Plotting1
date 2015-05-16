@@ -1,0 +1,16 @@
+{
+    "contents" : "##to load the dataset from the zipped file\nfilename<-\"../data/household_power_consumption.txt\"\ndataset<-read.table(filename,                 \n                    header=TRUE,\n                    sep=\";\",\n                    colClasses=c(\"character\",\"character\",rep(\"numeric\",7)),\n                    na=\"?\")\ndim(dataset)\n#attached dataset to R search path to ease searching by R\nattach(data)\n## Get data of 2 days only,  from the dates 2007-02-01 and 2007-02-02.\n## Subset the data base on the 2 days\nsubset <- Date == \"1/2/2007\" | Date == \"2/2/2007\"\nnewData <- data[subset, ]\nattach(newData)\nx <- paste(Date, Time)\nnewData$DateTime <- strptime(x, \"%d/%m/%Y %H:%M:%S\")\nrownames(newData) <- 1:nrow(newData)\ndim(newData) # 2880   10\nattach(newData)\n\n",
+    "created" : 1428858314985.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2203843269",
+    "id" : "5E957702",
+    "lastKnownWriteTime" : 1428858372,
+    "path" : "C:/Users/brandonhu/Desktop/brandon/Course/ExploratoryGraphs/Project_1/ExData_Plotting1/loadData.R",
+    "project_path" : "loadData.R",
+    "properties" : {
+    },
+    "source_on_save" : true,
+    "type" : "r_source"
+}
